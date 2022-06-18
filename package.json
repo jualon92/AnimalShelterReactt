@@ -8,7 +8,8 @@
     "process": "^0.11.10"
   },
   "scripts": {
-    "dev": "parcel index.html"
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "dependencies": {
     "install": "^0.13.0",
