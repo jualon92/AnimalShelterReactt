@@ -101,8 +101,8 @@ const SearchParams = () => {
             <option value="mediumorchid">Medium Orchid</option>
           </select>
         </label>
-        ;<button style={{ backgroundColor: theme }}>Submit</button>;
-        <div>Dato ingresado: {location}</div>
+        <button style={{ backgroundColor: theme }}>Submit</button>
+        {/*<div>Dato ingresado: {location}</div>*/}
       </form>
       <Results pets={pets} />
     </div>
