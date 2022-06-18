@@ -3,7 +3,12 @@ import Pet from "./Pet";
 import Results from "./Results";
 import useBreedList from "./useBreedList";
 import ThemeContext from "./ThemeContext";
+import { Client } from "@petfinder/petfinder-js";
 
+const client = new Client({
+  apiKey: "5rfxmXrtQSMZJWLanVnXwoZSQJUq5a3Wp52hDEUJAuA074M6Ms",
+  secret: "svUHB64pldK5RmJhyLR5ODDBlxpm9cavueQ6RtoZ",
+});
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 
 const SearchParams = () => {
@@ -15,16 +20,14 @@ const SearchParams = () => {
   const [theme, setTheme] = useContext(ThemeContext);
 
   useEffect(() => {
-    fetchPets();
+    fetchPets()
   }, []);
 
   const fetchPets = async () => {
-    const res = await fetch(
-      `https://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`
-    );
-    const json = await res.json();
-    console.log(json);
-    setPets(json.pets);
+    const resp = await client.animal.search()
+    const animals = resp.data.animals
+    console.log(animals)
+    setPets(animals);
   };
 
   return (

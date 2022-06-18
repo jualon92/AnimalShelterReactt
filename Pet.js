@@ -4,7 +4,8 @@ const Pet = (props) => {
 
   let hero = "https://pets-images.dev-apis.com/pets/none.jpg";
   if (images.length) {
-    hero = images[0];
+    console.log(props)
+    hero = images[0].small;
   }
   
    //id?
