@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import SearchParams from "./SearchParameters";
-import Details from "./Details";
+import Details from "./Details/Details";
 import { StrictMode, useState } from "react";
 import ThemeContext from "./ThemeContext";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";

@@ -1,14 +1,11 @@
 import { Component } from "react";
 import { useParams } from "react-router-dom";
-import { Client } from "@petfinder/petfinder-js";
+import client from "../helpers/utility"
 import Modal from "./Modal";
-import ThemeContext from "./ThemeContext";
+import ThemeContext from "../ThemeContext";
 import Carousel from "./Carousel";
 
-const client = new Client({ // could be an static class 
-  apiKey: "5rfxmXrtQSMZJWLanVnXwoZSQJUq5a3Wp52hDEUJAuA074M6Ms",
-  secret: "svUHB64pldK5RmJhyLR5ODDBlxpm9cavueQ6RtoZ",
-});
+
 
 class Details extends Component {
   state = { loading: true, showModal: false };

@@ -3,12 +3,8 @@ import Pet from "./Pet";
 import Results from "./Results";
 import useBreedList from "./useBreedList";
 import ThemeContext from "./ThemeContext";
-import { Client } from "@petfinder/petfinder-js";
+import client from "./helpers/utility"
 
-const client = new Client({
-  apiKey: "5rfxmXrtQSMZJWLanVnXwoZSQJUq5a3Wp52hDEUJAuA074M6Ms",
-  secret: "svUHB64pldK5RmJhyLR5ODDBlxpm9cavueQ6RtoZ",
-});
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 
 const SearchParams = () => {
