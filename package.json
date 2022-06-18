@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
+    "parcel": "^2.6.0",
+    "prettier": "2.7.0",
+    "process": "^0.11.10"
+  },
+  "scripts": {
+    "dev": "parcel index.html"
+  },
+  "dependencies": {
+    "install": "^0.13.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0"
+  }
+}
